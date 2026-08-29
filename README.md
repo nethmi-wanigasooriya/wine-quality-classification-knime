@@ -39,3 +39,21 @@ The dataset used in this project consists of two separate CSV files:
 ## ⚙️ Workflow & Architecture in KNIME
 
 The KNIME workflow consists of the following data processing pipeline:
+
+## ⚙️ Workflow & Architecture in KNIME
+
+```mermaid
+graph TD
+    A[CSV Reader - Red] --> C[Constant Value Column Appender - Red]
+    B[CSV Reader - White] --> D[Constant Value Column Appender - White]
+    C --> E[Concatenate]
+    D --> E
+    E --> F[Rule Engine: Good/Low Label]
+    F --> G[Table Partitioner: 80% Train / 20% Test]
+    G -->|80% Train Data| H[Normalizer]
+    G -->|20% Test Data| I[Normalizer Apply]
+    H -->|Normalized Train Data| J[Random Forest Learner]
+    H -->|Model Parameters| I
+    I -->|Normalized Test Data| K[Random Forest Predictor]
+    J -->|Trained Model| K
+    K --> L[Scorer: Confusion Matrix & Accuracy]
