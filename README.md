@@ -1,17 +1,17 @@
 # wine-quality-classification-knime
 
-# 🍷 Wine Quality & Type Classification using KNIME
+#  Wine Quality & Type Classification using KNIME
 
 An end-to-end Machine Learning data pipeline built using **KNIME Analytics Platform** to analyze chemical properties of red and white wines and classify them into quality categories.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 The objective of this project is to process chemical attributes of wine datasets, apply preprocessing techniques, and construct a predictive model using **Random Forest Classifier** to accurately distinguish between high-quality and low-quality wines based on their chemical composition.
 
 ---
 
-## 📊 Dataset Information
+##  Dataset Information
 The dataset used in this project consists of two separate CSV files:
 - **`winequality-red.csv`**: Red wine variants (1,599 instances)
 - **`winequality-white.csv`**: White wine variants (4,898 instances)
@@ -36,11 +36,11 @@ The dataset used in this project consists of two separate CSV files:
 
 ---
 
-## ⚙️ Workflow & Architecture in KNIME
+##  Workflow & Architecture in KNIME
 
 The KNIME workflow consists of the following data processing pipeline:
 
-## ⚙️ Workflow & Architecture in KNIME
+##  Workflow & Architecture in KNIME
 
 ```mermaid
 graph TD
